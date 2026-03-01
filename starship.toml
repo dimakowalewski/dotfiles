@@ -1,0 +1,102 @@
+# ----------------------------
+# General Prompt Layout
+# ----------------------------
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$aws\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+add_newline = true
+
+# ----------------------------
+# Character
+# ----------------------------
+
+[character]
+success_symbol = "[›](bold green)"
+error_symbol = "[›](bold red)"
+
+# ----------------------------
+# Directory
+# ----------------------------
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+
+# ----------------------------
+# Git Branch
+# ----------------------------
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+# ----------------------------
+# Git Status
+# ----------------------------
+
+[git_status]
+style = "bold yellow"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = "✖"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "≡"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+# ----------------------------
+# Node.js
+# ----------------------------
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+# ----------------------------
+# AWS Profile
+# ----------------------------
+
+[aws]
+symbol = " "
+style = "bold yellow"
+format = "on [$symbol($profile )]($style)"
+
+# ----------------------------
+# Command Duration
+# ----------------------------
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold red)"
+
+# ----------------------------
+# Username (only if root)
+# ----------------------------
+
+[username]
+show_always = false
+
+# ----------------------------
+# Hostname (only via SSH)
+# ----------------------------
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold dimmed white) "
