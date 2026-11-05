@@ -1,0 +1,27 @@
+# Look
+theme = light:3024 Day,dark:Xcode Dark hc
+font-family = Fira Code
+font-size = 14
+font-style-bold = false
+adjust-cell-height = 7%
+window-padding-x = 15
+window-padding-y = 10
+cursor-style = block
+cursor-style-blink = false
+adjust-cursor-thickness = 2
+cursor-color = #ff9e64
+cursor-opacity = 1
+
+# macOS window
+macos-titlebar-style = tabs
+background-opacity = 0.95
+background-blur-radius = 20
+
+# Behavior
+macos-option-as-alt = true
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+confirm-close-surface = false
+
+# Quick terminal: a dropdown terminal on a global hotkey
+keybind = global:cmd+grave_accent=toggle_quick_terminal
