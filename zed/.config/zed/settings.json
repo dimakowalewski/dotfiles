@@ -1,0 +1,102 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "disable_ai": false,
+  "tab_size": 2,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
+  "soft_wrap": "none",
+  "show_whitespaces": "selection",
+  "relative_line_numbers": "disabled",
+  "cursor_blink": false,
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:14b",
+      "enable_thinking": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "project_panel": {
+    "default_width": 250.0,
+    "dock": "left"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  "buffer_font_weight": 400,
+  "buffer_line_height": "comfortable",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé",
+  },
+  // Terminal panel
+  "terminal": {
+    "font_family": "Fira Code",
+    "font_size": 13,
+    "shell": { "program": "zsh" },
+    "working_directory": "current_project_directory"
+  },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "toml": true,
+    "dockerfile": true,
+    "html": true,
+    "ruby": true
+  },
+  // Privacy
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph", "..."]
+    }
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "available_models": [
+        {
+          "name": "qwen2.5-coder:14b",
+          "display_name": "Qwen2.5 Coder 14B",
+          "max_tokens": 16384,
+          "supports_tools": true
+        }
+      ]
+    }
+  },
+  "edit_predictions": {
+    "provider": "ollama",
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "model": "qwen2.5-coder:7b-base",
+      "max_output_tokens": 64
+    }
+  }
+}

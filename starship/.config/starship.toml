@@ -1,0 +1,49 @@
+# Keep the prompt on one line, with no blank line between prompts
+add_newline = false
+
+# Only show what you actually want, in this order
+format = """$directory$git_branch$git_status$nodejs$ruby$cmd_duration$character"""
+
+[hostname]
+disabled = true
+
+[character]
+success_symbol = "[›](bold green)"
+error_symbol = "[›](bold red)"
+
+[directory]
+truncation_length = 2
+truncate_to_repo = true
+style = "bold blue"
+
+[git_branch]
+format = "[$branch]($style) "
+style = "purple"
+
+[git_status]
+style = "bold yellow"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = "✖"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "≡"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[ruby]
+style = "bold red"
+format = "[$symbol($version )]($style)"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol($version )]($style)"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "dimmed white"
